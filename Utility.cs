@@ -42,7 +42,7 @@ namespace CarbonInjector
             };
             process.StartInfo = startInfo;
             process.Start();
-            MessageBox.Show("Attempted to open Minecraft");
+            MessageBox.Show("Tried to open Minecraft");
         }
 
         public static bool IsGameOpen()
@@ -78,7 +78,7 @@ namespace CarbonInjector
                         OpenGame();
                     }else
                     {
-                        MessageBox.Show("Open Minecraft First");
+                        MessageBox.Show("Open Da Minecraft First");
                     }
 
                     Thread.Sleep(TimeSpan.FromSeconds(5));

@@ -21,7 +21,7 @@ namespace CarbonInjector
         public bool openGame;
         public string DLLPath;
 
-        public static Config LoadDefault()
+        public static Config LoadDaDefault()
         {
             return new Config()
             {
@@ -33,7 +33,7 @@ namespace CarbonInjector
             };
         }
 
-        public static void SaveConfig(Config configuration)
+        public static void SaveDaConfig(Config configuration)
         {
             var formatting = new BinaryFormatter();
             using (var stream = new FileStream(Utility.InjectorPath + "\\config.carbon", FileMode.Create))
@@ -44,7 +44,7 @@ namespace CarbonInjector
 
         public static Config LoadConfig()
         {
-            if (!File.Exists(Utility.InjectorPath + "\\config.carbon")) return LoadDefault();
+            if (!File.Exists(Utility.InjectorPath + "\\config.carbon")) return LoadDaDefault();
 
             var formatter = new BinaryFormatter();
             using (var stream = new FileStream(Utility.InjectorPath + "\\config.carbon", FileMode.Open, FileAccess.Read))

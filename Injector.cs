@@ -68,7 +68,7 @@ namespace CarbonInjector
                 Utility.client.ClearPresence();
                 config.RPC = false;
             }
-            Config.SaveConfig(config);
+            Config.SaveDaConfig(config);
         }
         private void ApplyConfig()
         {
@@ -107,7 +107,7 @@ namespace CarbonInjector
 
         private void Injector_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Config.SaveConfig(config);
+            Config.SaveDaConfig(config);
         }
 
         private void openGameToggle_CheckedChanged(object sender, EventArgs e)
